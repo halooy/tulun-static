@@ -1,0 +1,78 @@
+.body-main{
+    /*text-align: center; !*让div内部文字居中*!*/
+    /*background-color: #fff;*/
+    width: 600px;
+    height: 350px;
+    margin: auto;
+    position: absolute;
+    top: 60px;
+    left: 900px;
+    right: 0;
+    bottom: 0;
+    font-size:40px;
+    z-index:9;
+    color:black;
+}
+#plate3 li:hover{
+    transform:scale(1.3) ;
+    transition-duration:0.5s;
+}
+.plate2-container,.plate4-container,.plate6-container{
+    width: 100%;
+}
+.plate2-container>div ,.plate4-container>div,.plate6-container>div{
+    margin: auto;
+    /*position: absolute;*/
+    padding-top:250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+body{
+    overflow-x: hidden;
+}
+#plate1{
+    background:url("../img/plate1-1.png");
+}
+.container{
+    margin-left:0px;
+    padding-left:0px;
+    width: 100%;
+    position:absolute;
+    margin:auto;
+    top: 250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height:540px;
+}
+#menu_action:hover{
+    cursor:pointer;
+}
+#plate2-translate-c,#plate4-translate,#plate6-translate,#plate2-translate-e,#plate4-translate-c,#plate6-translate-c{
+    cursor:pointer;
+}
+#plate5 td{
+    overflow:hidden;
+}
+#plate5 img:hover{
+    transform:scale(1.3) ;
+    transition-duration:0.5s;
+}
+#plate2{
+    background:#acdb92;
+}
+#plate4,#plate5{
+    background:#f2aa6a;
+}
+#plate6{
+    background:#a4a9ac;
+}
+.plate8-container{
+    padding-right:250px;
+}
+.plate8-container div{
+    margin-left:50px;
+    font-size:68px;
+    float:right;
+}

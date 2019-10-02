@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最美长安春</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/css/main.css">
+    <script type="text/javascript" src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/js/main.js"></script>
+    <link rel="stylesheet" href="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/css/marquee.css" type="text/css">
+    <script type="text/javascript" src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/js/marquee.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            createMarquee({
+                duration:40000
+            });
+
+            //中英文切换
+            var i=0;
+            var j=-500;
+            var plate2translate2E;
+            function plate2move2E() {
+                // console.log(i);
+                $("#plate2-translate-c-div-left").css("left","-"+i+"px");
+                $("#plate2-translate-e-div-left").css("right",j+"px");
+                i+=10;
+                j+=10;
+            }
+            function plate2move2C() {
+                $("#plate2-translate-e-div-left").css("right",i+"px");
+                $("#plate2-translate-c-div-left").css("left",j+"px");
+                i+=10;
+                j-=10;
+            }
+            $("#plate2-translate-c").click(function () {
+                if($("#plate2-translate-c-div-left").css("left")=="500px"){ //此时是英文状态
+                    plate2translate2Ec= setInterval(plate2move2C,10);
+                    setTimeout(function () {
+                        clearInterval(plate2translate2Ec);
+                        $("#plate2-translate-e-div-left").css("right","-"+500+"px");
+                        i=0;
+                        j=-500;
+                    },510);
+                }else{
+                    plate2translate2Ec= setInterval(plate2move2E,10);
+                    setTimeout(function () {
+                        clearInterval(plate2translate2Ec);
+                        $("#plate2-translate-c-div-left").css("left",500+"px");
+                        i=0;
+                        j=500;
+                    },540);
+                }
+            });
+
+            var p6i=0;
+            var p6j=-500;
+            var plate6translate2Ec;
+            function plate6move2E() {
+                // console.log(i);
+                $("#plate6-translate-c-div-left").css("left","-"+p6i+"px");
+                $("#plate6-translate-e-div-left").css("right",p6j+"px");
+                p6i+=10;
+                p6j+=10;
+            }
+            function plate6move2C() {
+                $("#plate6-translate-e-div-left").css("right",p6i+"px");
+                $("#plate6-translate-c-div-left").css("left",p6j+"px");
+                p6i+=10;
+                p6j-=10;
+            }
+            $("#plate6-translate-c").click(function () {
+                if($("#plate6-translate-c-div-left").css("left")=="500px"){ //此时是英文状态
+                    plate6translate2Ec= setInterval(plate6move2C,10);
+                    setTimeout(function () {
+                        clearInterval(plate6translate2Ec);
+                        $("#plate6-translate-e-div-left").css("right","-"+500+"px");
+                        p6i=0;
+                        p6j=-500;
+                    },510);
+                }else{
+                    plate6translate2Ec= setInterval(plate6move2E,10);
+                    setTimeout(function () {
+                        clearInterval(plate6translate2Ec);
+                        $("#plate6-translate-c-div-left").css("left",500+"px");
+                        p6i=0;
+                        p6j=500;
+                    },500);
+                }
+            });
+
+            var p1i=0;
+            var p1j=500;
+            var plate4translate2Ec;
+            function plate4move2E() {
+                // console.log(i);
+                $("#plate4-translate-c-div-left").css("left","-"+p1i+"px");
+                $("#plate4-translate-e-div-left").css("right","-"+p1j+"px");
+                p1i+=10;
+                p1j-=10;
+            }
+            function plate4move2C() {
+                $("#plate4-translate-e-div-left").css("right",p1i+"px");
+                $("#plate4-translate-c-div-left").css("left",p1j+"px");
+                p1i+=10;
+                p1j-=10;
+            }
+            $("#plate4-translate-c").click(function () {
+
+                if($("#plate4-translate-c-div-left").css("left")=="500px"){ //此时是英文状态
+                    plate4translate2Ec= setInterval(plate4move2C,10);
+                    setTimeout(function () {
+                        clearInterval(plate4translate2Ec);
+                        $("#plate4-translate-e-div-left").css("right","-"+500+"px");
+                        p1i=0;
+                        p1j=500;
+                    },510);
+                }else{
+                    plate4translate2Ec= setInterval(plate4move2E,10);
+                    setTimeout(function () {
+                        clearInterval(plate4translate2Ec);
+                        $("#plate4-translate-c-div-left").css("left",500+"px");
+                        p1i=0;
+                        p1j=500;
+                    },500);
+                }
+            });
+
+
+
+
+        });
+    </script>
+    <style type="text/css" rel="stylesheet">
+        a{
+            color: white
+        }
+        #menu_show{
+            width: 200px;
+            height:300px;
+            background:#868698;
+            opacity :0.36;
+            display:none;
+        }
+        .shuli{
+            margin:0 auto;
+            margin-top:100px;width:80px;line-height:100px;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            $("a").click(function(){
+                var hr = $(this).attr("href");
+                var anh = $(hr).offset().top;
+                $("html,body").stop().animate({scrollTop:anh},500);
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <div id="plate1" style="height:900px">
+        <table  align="right" style="position: absolute; width: 100%;height: 80px; "  >
+            <tbody>
+            <tr>
+                <td width="40%"></td>
+                <td width="40%"></td>
+                <td width="13%"></td>
+                <td align="center">
+                    <span id="menu_action" style="color:white">
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/sanheng.jpg" width="14px" height="11px" style="">
+                        MENU
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <table  align="right" style="position: absolute; width: 100%;height: 80px; top:60px"  >
+            <tbody>
+            <tr>
+                <td width="40%"></td>
+                <td width="40%"></td>
+                <td width="5.5%"></td>
+                <td align="center">
+                    <div id="menu_show">
+                        <ul style="list-style:none;text-align:left;color:white;padding-left:20px;padding-top:30px;">
+                            <li style="margin-top:20px"><a href="#plate2" >长安行 Xi'an trip</a></li>
+                            <li style="margin-top:20px"><a href="#plate4">品长安 Xi'an food</a></li>
+                            <li style="margin-top:20px"><a href="#plate6">校园说 Universities </a></li>
+                            <!--<li  style="padding-top:30px"><a href="#plate5">关于我们 About us</a></li>-->
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div id="">
+            <!--<img src=" " title="xian" width="1781px" height="800px"  >-->
+            <div class="body-main" >
+                <div style="font-family:宋体;">
+                    <p>穿越千年的前世之旅</p>
+                    <p style="font-size: 16px">&nbsp;&nbsp;&nbsp;A Past Life Travel through Millennium</p>
+                    <p style="">去多少次都看不够的美</p>
+                    <p style="font-size: 16px">&nbsp;&nbsp;&nbsp;Many times I have not seen enough beauty.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div type="clear:both"></div>
+    <div id="plate2" style="height:900px">
+        <div class="plate2-container">
+            <div style="width:1200px;height:900px;position: relative">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td rowspan="5">
+                            <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate2-1.png" height="480px" width="602px">
+                        </td>
+                        <td style="padding-left: 100px; padding-top:80px" valign="top">
+                            <table width="800px">
+                                <tbody>
+                                <tr>
+                                    <td colspan="10" style="font-size: 60px">
+                                        landmark of Xi’an
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" height="50px">
+                                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/wen2（2）.jpg" width="47" height="2">
+                                        <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="plate2-translate-c-div"style="width: 600px;height:300px">
+                                            <div style="float:left;position:relative;overflow:hidden;width: 460px;height:300px">
+                                                <div id="plate2-translate-c-div-left" style="position:relative;width:470px;float:left;height:100%">
+                                                    <p>长安后称西安是汉文化发源地,十三朝古都，是中国历</p>
+                                                    <p>史上建都朝代最多，建都时间最长，影响力最大的都城</p>
+                                                    <p>，居中国四大古都之首。亦是丝绸之路的东方起点和隋</p>
+                                                    <p>唐大运河的起点，长安文化影响极其深远，那让我们来</p>
+                                                    <p>这座魅力古都一探究竟吧。</p>
+                                                </div>
+                                                <div id="plate2-translate-e-div-left" style="position:absolute; right:-500px;width:470px;float:left;">
+                                                    <p>Changan said that Xi ' an is the birthplace of Han culture, 13 of the</p>
+                                                    <p>the longest capital, the most influential city,ranking the first of</p>
+                                                    <p>China's four ancient capitals.It is also the Oriental starting point</p>
+                                                    <p>of the Silk Road and the starting point of the Sui and Tang dynasties,</p>
+                                                    <p>Changan culture has a profound influence,</p>
+                                                    <p>so let us come to this charming ancient capital to explore the bottom of it.</p>
+                                                </div>
+                                            </div>
+                                            <div id="plate2-translate-c-div-right" style="float:left;margin-top:40px;margin-left:0px;height:150px">
+                                                <img id="plate2-translate-c" src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate2-right-s.png" alt="">
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <!--<table id="plate2-translate-c-table" style="position:absolute;top:465px">-->
+                                        <!--<tr style="height:30px">-->
+                                            <!--<td colspan="3" style="width: 470px">-->
+                                                <!--长安后称西安是汉文化发源地,十三朝古都，是中国历-->
+                                            <!--</td>-->
+                                            <!--<td rowspan="5" width="330px">-->
+                                                <!--<img id="plate2-translate-c" src="../img/plate2-right-s.png" alt="">-->
+                                            <!--</td>-->
+                                        <!--</tr>-->
+                                        <!--<tr style="height:30px">-->
+                                            <!--<td colspan="3">-->
+                                                <!--史上建都朝代最多，建都时间最长，影响力最大的都城-->
+                                            <!--</td>-->
+                                        <!--</tr>-->
+                                        <!--<tr style="height:30px">-->
+                                            <!--<td colspan="3">-->
+                                                <!--，居中国四大古都之首。亦是丝绸之路的东方起点和隋-->
+                                            <!--</td>-->
+                                        <!--</tr>-->
+                                        <!--<tr style="height:30px">-->
+                                            <!--<td colspan="3">-->
+                                                <!--唐大运河的起点，长安文化影响极其深远，那让我们来-->
+                                            <!--</td>-->
+                                        <!--</tr>-->
+                                        <!--<tr style="height:30px">-->
+                                            <!--<td colspan="3">-->
+                                                <!--这座魅力古都一探究竟吧。-->
+                                            <!--</td>-->
+                                        <!--</tr>-->
+                                    <!--</table>-->
+                                </tr>
+
+                                <tr>
+                                    <table id="plate2-translate-e-table" style="display:none;position:absolute;top:465px;left:700px">
+                                        <tr style="height:30px">
+                                            <td colspan="3" style="width: 470px">
+                                                Changan said that Xi ' an is the birthplace of Han culture, 13 of the
+                                            </td>
+                                            <td rowspan="5" width="330px">
+                                                <img id="plate2-translate-e" src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate2-right-s.png" alt="">
+                                            </td>
+                                        </tr>
+                                        <tr style="height:30px">
+                                            <td colspan="3">
+
+                                            </td>
+                                        </tr>
+                                        <tr style="height:30px">
+                                            <td colspan="3">
+                                                the longest capital, the most influential city,ranking the first of
+                                            </td>
+                                        </tr>
+                                        <tr style="height:30px">
+                                            <td colspan="3">
+                                                China's four ancient capitals.It is also the Oriental starting point
+                                            </td>
+                                        </tr>
+                                        <tr style="height:30px">
+                                            <td colspan="3">
+                                                of the Silk Road and the starting point of the Sui and Tang dynasties,
+                                            </td>
+                                        </tr>
+                                        <tr style="height:30px">
+                                            <td colspan="3">
+                                                Changan culture has a profound influence,
+                                            </td>
+                                        </tr>
+                                        <tr style="height:30px">
+                                            <td colspan="3">
+                                                so let us come to this charming ancient capital to explore the bottom of it.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div type="clear:both"></div>
+    <div id="plate3" style="position:relative;height:900px">
+        <div class="container">
+            <div class="marquee">
+                <ul class="marquee-content-items">
+                    <li>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate3-2.png" width="320" height="540">
+                    </li>
+                    <li>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate3-3.png" width="320" height="540">
+                    </li>
+                    <li>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate3-4.png" width="320" height="540">
+                    </li>
+                    <li>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate3-5.png" width="320" height="540">
+                    </li>
+                    <li>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate3-1.JPG" width="320" height="540">
+                    </li>
+                    <li>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate3-6.png" width="320" height="540">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="plate4" style="height:900px">
+        <div class="plate4-container">
+            <div style="width:1200px;height:900px">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td style=" padding-right: 100px; ;padding-top:80px" valign="top">
+                            <table width="500px">
+                                <tbody>
+                                <tr>
+                                    <!--<td rowspan="6" style="position: relative;left:-70px;top:35px">-->
+                                        <!--<img id="plate4-translate" src="../img/plate4-left-s.png" alt="">-->
+                                    <!--</td>-->
+                                    <td colspan="10" style="font-size: 60px">
+                                        Cuisine in Xi’an
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5" height="50px">
+                                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/wen2（2）.jpg" width="47" height="2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div id="plate4-translate-c-div"style="width: 400px;height:300px">
+                                            <div style="overflow:hidden;float:left;position:relative;width: 460px;height:300px">
+                                                <div id="plate4-translate-c-div-left" style="position:relative;width:470px;float:left;height:100%">
+                                                    <p>西安并不是只有美景，它当地的特色美食也是让你回味</p>
+                                                    <p>无穷，无论是在这座古城中吆喝的小贩还是极具现代化</p>
+                                                    <p>的餐厅里面的某些特色足以让你感受这座城市的饮食文</p>
+                                                    <p>化，让你了解不一样的西安。</p>
+                                                </div>
+                                                <div id="plate4-translate-e-div-left" style="position:absolute; right:-500px;width:470px;float:left;">
+                                                    <p>Xi ' An is not only beautiful scenery, its local specialties are also to make you</p>
+                                                    <p>aftertaste, whether it is in this ancient city yelling hawker or a very modern</p>
+                                                    <p>restaurant in some of the characteristics of enough to let you feel the city's food</p>
+                                                    <p>culture, let you understand the different XI ' an.</p>
+                                                </div>
+                                            </div>
+                                            <div id="plate4-translate-c-div-right" style="float:left;position:absolute;left:270px">
+                                                <img id="plate4-translate-c" src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate4-left-s.png" alt="">
+                                            </div>
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                        <td style="">
+                            <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate4-1.png" height="480px" width="602px">
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="plate5" style="height:900px">
+        <div class="plate-container">
+            <table>
+                <tbody>
+                <tr style="height:540px">
+                    <td>
+                        <div class="plate3-table-left" style="width:350px" >
+                            <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate5-1.png" width="351" height="538">
+                        </div>
+                    </td>
+                    <td align="center" valign="top">
+                        <div class="plate3-table-center" style="width:1220px">
+                            <table valign="top">
+                                <tr style="height:245px">
+                                    <td style="padding-right:25px">
+                                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate5-2.png" width="292" height="245">
+                                    </td>
+                                    <td style="padding-right:25px;padding-left:25px">
+                                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate5-3.png" width="292" height="245">
+                                    </td>
+                                    <td style="padding-right:25px;padding-left:25px">
+                                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate5-4.png" width="440" height="245">
+                                    </td>
+                                </tr>
+                            </table>
+                            <div style="height:50px"></div>
+                            <table style="height:245px">
+                                <tr>
+                                    <td style="padding-right:25px">
+                                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate5-6.png" width="440" height="245">
+                                    </td>
+                                    <td style="padding-right:25px;padding-left:25px">
+                                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate5-7.png" width="292" height="245">
+                                    </td>
+                                    <td style="padding-right:25px;padding-left:25px">
+                                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate5-8.png" width="292" height="245">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="plate3-table-right" style="width:350px">
+                            <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate5-5.png" width="351" height="538">
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="plate6" style="height:900px">
+        <div class="plate6-container">
+            <div style="width:1200px;height:900px">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td rowspan="5">
+                            <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate6-1.png" height="480px" width="602px">
+                        </td>
+                        <td style="padding-left: 100px; padding-top:80px" valign="top">
+                            <table width="800px">
+                                <tbody>
+                                <tr>
+                                    <td colspan="10" style="font-size: 60px">
+                                        Universities in Xi’an
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="5"height="50px">
+                                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/wen2（2）.jpg" width="47" height="2">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+
+                                        <div id="plate6-translate-c-div"style="width: 600px;height:300px">
+                                            <div style="float:left;position:relative;overflow:hidden;width: 460px;height:300px">
+                                                <div id="plate6-translate-c-div-left" style="position:relative;width:470px;float:left;height:100%">
+                                                    <p>西安是西北工业基地，上个世纪中国进行改革开放和高</p>
+                                                    <p>校的大调整，西安被发展成西部重点工业军事基地，这</p>
+                                                    <p>63所高等学府也是游长安的必经之地。</p>
+                                                </div>
+                                                <div id="plate6-translate-e-div-left" style="position:absolute; right:-500px;width:470px;float:left;">
+                                                    <p>Xi'an is a northwest industrial base. In the last century, China</p>
+                                                    <p>carried out reform and opening up and major adjustments in universities. </p>
+                                                    <p>Xi'an was developed into a key industrial military base in the west.</p>
+                                                    <p>These 63 institutions of higher learning are also the must-see places for Chang'an.</p>
+                                                </div>
+                                            </div>
+                                            <div id="plate6-translate-c-div-right" style="float:left;margin-top:40px;margin-left:0px;height:150px">
+                                                <img id="plate6-translate-c" src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate2-right-s.png" alt="">
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="plate7" style="height:900px">
+        <div class="plate7-container">
+            <table>
+                <tbody>
+                <tr>
+                    <td>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate6-2.png" width="480" height="480">
+                    </td>
+                    <td>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate6-3.png" width="480" height="480">
+                    </td>
+                    <td>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate6-4.png" width="480" height="480">
+                    </td>
+                    <td>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate6-5.png" width="480" height="480">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate6-6.png" width="480" height="480">
+                    </td>
+                    <td>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate6-7.png" width="480" height="480">
+                    </td>
+                    <td>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate6-8.png" width="480" height="480">
+                    </td>
+                    <td>
+                        <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate6-9.png" width="480" height="480">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="plate8" style="height:1400px">
+        <div class="plate8-container" style="text-align:center;margin:0 auto;font-family:楷体">
+            <div class="shuli">
+                我走在繁华的朱雀大街的主干
+            </div>
+            <div class="shuli">
+                道上.
+            </div>
+            <div class="shuli">
+                凌晨的大街上
+            </div>
+            <div class="shuli">
+                灯火阑珊.
+            </div>
+            <div class="shuli">
+                仿佛盛世长安又现.
+            </div>
+            <div class="shuli">
+                而且就在我的脚下.
+            </div>
+            <div class="shuli">
+                磅礴,威严.
+            </div>
+            <div class="shuli">
+                站在楼顶.
+            </div>
+            <div class="shuli">
+                远眺着古城墙
+            </div>
+            <div class="shuli">
+                仿佛看到了十三朝的历史
+            </div>
+            <div class="shuli">
+                幻影在眼前一一闪过
+            </div>
+        </div>
+    </div>
+    <div class="plate9" style="height:200px;background:black">
+        <div class="plate9-container">
+            <img src="../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application%20Support/com.tencent.xinWeChat/2.0b4.0.9/6e15c8a6b1068933629f893edaf9ea3c/Favorites/data/TuLun_Static/img/plate9-1.png" alt="">
+        </div>
+    </div>
+
+</body>
+</html>

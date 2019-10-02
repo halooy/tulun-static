@@ -1,0 +1,3 @@
+$(function () {
+    $(".my-center").bind()
+});

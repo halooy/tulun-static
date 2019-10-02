@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>最美长安春</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <link rel="stylesheet" href="../css/marquee.css" type="text/css">
+    <style type="text/css" rel="stylesheet">
+        #container{
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background-color:black;
+            color:white;
+            text-align: center;
+            font-family:"楷体";
+            /*opacity:0.5;*/
+        }
+        #container>div{
+            padding-top:250px;
+            /*background-color:white;*/
+            height:600px;
+            width:600px;
+        }
+        .enter{
+            font-size:20px;
+            cursor:pointer;
+        }
+        .enter:hover{
+            text-decoration:underline;
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            $(".enter").click(function () {
+                $("#container").fadeOut(1000,function () {
+                    window.location.href="index.html";
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div style="margin: 0 auto">
+            <span style="font-size:72px;">穿越千年的回眸</span>
+            <br>
+            <br>
+            <br>
+            <br>
+            <span class="enter">WELCOME TO CHANG AN</span>
+        </div>
+    </div>
+
+    <div id="plate1" style="height:880px">
+        <div id="">
+            <!--<img src=" " title="xian" width="1781px" height="800px"  >-->
+            <div class="body-main" >
+                <div style="font-family:宋体;">
+                    <p>穿越千年的前世之旅</p>
+                    <p style="font-size: 16px">&nbsp;&nbsp;&nbsp;A Past Life Travel through Millennium</p>
+                    <p style="">去多少次都看不够的美</p>
+                    <p style="font-size: 16px">&nbsp;&nbsp;&nbsp;Many times I have not seen enough beauty.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
